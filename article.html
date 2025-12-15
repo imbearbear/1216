@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Employee Experience Platform</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3E88B0", // Deep Blue
+                        "secondary": "#6DA5CA", // Medium Blue
+                        "tertiary": "#C0CFDB", // Light Blue
+                        "cream": "#F4F2ED", // Cream White
+                        "beige": "#ECDCD7", // Light Yellow/Beige
+                        "surface": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-[#F5F5F5] dark:bg-background-dark font-display text-[#111518] antialiased overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col min-h-screen">
+
+    <header class="w-full border-b border-solid border-tertiary px-4 py-3 bg-white/80 backdrop-blur-md">
+            <div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+
+                <!-- 左邊 Logo -->
+                <div class="flex items-center gap-4 text-primary">
+                    <div class="size-8 text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px"
+                            fill="#F19175">
+                            <path
+                                d="M440-501Zm0 381L313-234q-72-65-123.5-116t-85-96q-33.5-45-49-87T40-621q0-94 63-156.5T260-840q52 0 99 22t81 62q34-40 81-62t99-22q81 0 136 45.5T831-680h-85q-18-40-53-60t-73-20q-51 0-88 27.5T463-660h-46q-31-45-70.5-72.5T260-760q-57 0-98.5 39.5T120-621q0 33 14 67t50 78.5q36 44.5 98 104T440-228q26-23 61-53t56-50l9 9 19.5 19.5L605-283l9 9q-22 20-56 49.5T498-172l-58 52Zm280-160v-120H600v-80h120v-120h80v120h120v80H800v120h-80Z" />
+                        </svg>
+                    </div>
+                <h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] text-primary">員工體驗平台</h2>
+                </div>
+
+                <!-- 右側區塊：導覽列 + avatar + logout + menu -->
+                <div class="flex items-center gap-6">
+
+                    <!-- Desktop 導覽列 -->
+                    <div class="hidden md:flex items-center gap-9">
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="/index.html">首頁</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="consultation.html">諮詢服務</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="elearning.html">數位課程</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="activity.html">活動講座</a>
+                        <a class="text-primary text-sm font-bold"
+                            href="guide.html">職場指南針</a>
+                    </div>
+
+                    <!-- Avatar -->
+                    <img src="image/avatar.jpg" alt="使用者頭像" class="aspect-square size-10 rounded-full object-cover border-2 border-primary"/>
+
+                    <!-- Logout -->
+                    <button
+                        class="hidden md:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-beige text-primary hover:bg-tertiary transition-colors text-sm font-bold">
+                        <span class="truncate">Logout</span>
+                    </button>
+
+                    <!-- Mobile Menu -->
+                    <button class="md:hidden text-primary">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+
+            </div>
+</header>
+
+<main class="flex-1 w-full  mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+<div class="w-full">
+<article class="w-full lg:w-4/5 mx-auto bg-white rounded-[2rem] p-6 md:p-12 shadow-sm border border-[#f0f3f4]">
+<nav class="flex flex-wrap gap-2 items-center mb-10 text-sm justify-center md:justify-start">
+<a class="text-[#9ca3af] hover:text-primary transition-colors" href="/index.html">首頁</a>
+<span class="text-[#d1d5db] material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="text-[#9ca3af] hover:text-primary transition-colors" href="/guide.html">職場指南針</a>
+<span class="text-[#d1d5db] material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-medium">職涯規劃</span>
+</nav>
+<header class="mb-12 border-b border-[#f0f3f4] pb-10">
+<div class="flex flex-col items-center text-center w-full md:w-[90%] mx-auto">
+<span class="bg-[#fdf2f0] text-[#c0564b] px-5 py-2 rounded-full text-sm font-bold tracking-wide mb-5">心理文章</span>
+<h1 class="text-[#111518] text-3xl md:text-4xl lg:text-[42px] font-bold leading-[1.3] tracking-tight mb-6">
+             理解職業倦怠：如何在工作中找回你的熱情與平衡
+         </h1>
+<div class="flex items-center gap-3 text-[#6b7280] text-sm md:text-base font-medium">
+<span>2023年 10月 24日</span>
+<span class="text-xs text-[#d1d5db]">•</span>
+<span>陳頤 臨床心理師</span>
+</div>
+</div>
+</header>
+<div class="w-full rounded-2xl overflow-hidden mb-12 bg-[#f8fafc] border border-[#f0f3f4]">
+<img 
+  src="/image/article-burnout.jpg" 
+  alt="Minimalist cartoon line art illustration of a person watering a plant on their office desk, symbolizing growth and care" 
+  class="w-full aspect-video object-cover"
+  style="filter: opacity(0.9) saturate(0.8) contrast(1.1);"/>
+<div class="px-4 py-2 bg-[#f9fafb] text-center border-t border-[#f0f3f4]">
+<p class="text-xs text-[#9ca3af] italic">Illustration: Finding balance in the workplace environment.</p>
+</div>
+</div>
+<div class="article-content w-full md:max-w-[900px] lg:max-w-[1000px] mx-auto px-4">
+<p class="lead text-lg font-medium text-[#4b5563] leading-relaxed">
+    感到精疲力竭嗎？您可能正經歷職業倦怠。在現今快節奏的工作環境中，及早識別這些跡象至關重要。本指南將探討實用的步驟，幫助您恢復平衡並重燃職業熱情。
+                        </p>
+<h1>什麼是職業倦怠 (Burnout)？</h1>
+<p>
+                            職業倦怠不僅僅是感覺累了。它是長期的工作壓力未能成功管理而導致的一種綜合症。世界衛生組織（WHO）將其定義為一種職業現象，主要特徵包括能量耗盡、對工作產生消極或憤世嫉俗的感覺，以及職業效能降低。
+                        </p>
+<p>
+                            這就像是一根燃燒過度的蠟燭，最終失去了光芒。如果不加以解決，它不僅會影響你的工作表現，還會滲透到你的個人生活中，影響睡眠、人際關係甚至身體健康。
+                        </p>
+<div class="pull-quote">
+                            「休息不是偷懶，而是為了走更長遠的路。恢復精力是職業生涯中不可或缺的一部分。」
+                        </div>
+<h2>識別警訊</h2>
+<p>
+                            在你徹底崩潰之前，身體和心靈通常會發出求救信號。以下是一些常見的早期跡象：
+                        </p>
+<ul>
+<li><strong>1.持續的疲憊感：</strong> 即使睡了一整晚，早上醒來依然感到累。</li>
+<li><strong>2.情緒抽離：</strong> 開始對同事感到不耐煩，或對工作成果漠不關心。</li>
+<li><strong>3.效率下降：</strong> 花費更多時間完成以前很輕鬆的任務。</li>
+<li><strong>4.身體不適：</strong> 頻繁的頭痛、胃痛或免疫力下降。</li>
+</ul>
+<div class="my-10 bg-[#eef8ff] border border-blue-100 rounded-xl p-6 flex flex-col sm:flex-row items-center gap-6">
+<div class="size-16 bg-white rounded-full flex items-center justify-center text-primary shadow-sm shrink-0">
+<span class="material-symbols-outlined text-[32px]">psychology</span>
+</div>
+<div class="flex-1 text-center sm:text-left">
+<h4 class="text-lg font-bold text-[#0c4a6e] mb-1">感覺這些症狀很熟悉？</h4>
+<p class="text-[#0284c7] text-sm">如果您對目前的職涯感到迷惘，或是深受壓力困擾，我們的專業顧問團隊隨時準備聆聽您的聲音。</p>
+</div>
+<button class="shrink-0 px-6 py-2.5 bg-primary hover:bg-sky-600 text-white rounded-full font-bold text-sm transition-colors shadow-sm">
+                                立即預約諮商
+                            </button>
+</div>
+<h2>重燃熱情的實用步驟</h2>
+<h3>1. 設定界限 (Set Boundaries)</h3>
+<p>
+                            學會說「不」是預防倦怠的第一步。這可能意味著不把工作帶回家，或者在下班後關閉電子郵件通知。清晰的界線能保護你的私人時間，讓你真正地休息。
+                        </p>
+<h3>2. 尋找工作中的意義</h3>
+<p>
+                            嘗試重新連接你當初選擇這份工作的初衷。即使是微小的成就，也能帶來滿足感。如果目前的角色無法提供這種意義，或許是時候與主管談談調整職責，或者尋找新的挑戰。
+                        </p>
+<h3>3. 優先考慮自我照顧</h3>
+<p>
+                            這聽起來很老套，但規律的運動、均衡的飲食和充足的睡眠是抵抗壓力的基石。每天花15分鐘做一些與工作無關且讓你快樂的事情——無論是閱讀、園藝還是冥想。
+                        </p>
+<h2>結語</h2>
+<p>
+                            恢復熱情不是一蹴而就的過程，而是一系列的微小調整。請記住，尋求幫助不是軟弱的表現，而是智慧的展現。通過關注自身需求，你不僅能成為更好的員工，也能成為更快樂的人。
+                        </p>
+</div>
+<div class="mt-12 pt-8 border-t border-[#f0f3f4]">
+<div class="flex flex-col items-center justify-center gap-6">
+<div class="flex flex-wrap gap-2 justify-center">
+<span class="px-3 py-1 bg-[#f0f3f4] text-[#617b89] rounded-full text-xs font-medium hover:bg-[#e5e7eb] transition-colors cursor-pointer">#心理健康</span>
+<span class="px-3 py-1 bg-[#f0f3f4] text-[#617b89] rounded-full text-xs font-medium hover:bg-[#e5e7eb] transition-colors cursor-pointer">#職場壓力</span>
+<span class="px-3 py-1 bg-[#f0f3f4] text-[#617b89] rounded-full text-xs font-medium hover:bg-[#e5e7eb] transition-colors cursor-pointer">#自我成長</span>
+</div>
+<div class="flex flex-wrap justify-center gap-4 py-8 w-full max-w-4xl mx-auto">
+<button class="flex items-center justify-center gap-2.5 h-14 px-8 rounded-full bg-[#fdf2f0] text-[#c0564b] hover:bg-[#fde8e5] transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+<span class="font-bold text-lg">我也遇過</span>
+<span class="bg-white/60 text-[#c0564b] min-w-[28px] h-7 flex items-center justify-center rounded-full text-xs font-bold px-2 ml-1">124</span>
+</button>
+<button class="flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-gray-50 text-gray-600 hover:bg-gray-100 transition-colors shadow-sm border border-gray-100 transform hover:-translate-y-0.5">
+<span class="material-symbols-outlined text-[24px]">forum</span>
+<span class="font-bold text-lg">說說你的想法</span>
+</button>
+<button class="flex items-center justify-center gap-2 h-14 px-8 rounded-full bg-gray-50 text-gray-600 hover:bg-gray-100 transition-colors shadow-sm border border-gray-100 transform hover:-translate-y-0.5">
+<span class="material-symbols-outlined text-[24px]">bookmark_add</span>
+<span class="font-bold text-lg">先存下來</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+
+
+<section class="mt-20">
+<div class="flex items-center justify-between mb-8 px-2 border-b border-gray-300 pb-4">
+  <h3 class="text-2xl font-bold text-[#111518]">延伸閱讀</h3>
+  <a class="text-primary text-sm font-medium hover:underline flex items-center gap-1" href="#">
+    查看更多 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+  </a>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<a class="group flex flex-col gap-3 rounded-2xl p-4 hover:bg-white hover:shadow-lg hover:shadow-gray-200/50 transition-all duration-300 border border-transparent hover:border-[#f0f3f4]" href="#">
+<div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-[#f0f3f4] relative">
+<img 
+  src="/image/article-conflict.jpg" 
+  alt="Line art of people talking" 
+  class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+  style="filter: grayscale(0.5) contrast(1.1);"/>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<span class="text-xs font-bold text-primary uppercase tracking-wide">職場關係</span>
+<h4 class="text-lg font-bold text-[#111518] leading-tight group-hover:text-primary transition-colors">如何優雅地處理辦公室衝突？</h4>
+<p class="text-sm text-[#617b89] line-clamp-2">衝突不可避免，但應對方式決定了你的高度。學習三個溝通技巧...</p>
+<span class="text-xs text-[#9ca3af] mt-1">3 min read</span>
+</div>
+</a>
+<a class="group flex flex-col gap-3 rounded-2xl p-4 hover:bg-white hover:shadow-lg hover:shadow-gray-200/50 transition-all duration-300 border border-transparent hover:border-[#f0f3f4]" href="#">
+<div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-[#f0f3f4] relative">
+<img 
+  src="/image/article-tomato.jpg" 
+  alt="Line art of a minimalist clock" 
+  class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+  style="filter: grayscale(0.5) contrast(1.1);"/>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<span class="text-xs font-bold text-primary uppercase tracking-wide">效率提升</span>
+<h4 class="text-lg font-bold text-[#111518] leading-tight group-hover:text-primary transition-colors">番茄鐘工作法的進階應用</h4>
+<p class="text-sm text-[#617b89] line-clamp-2">除了25分鐘專注，你還可以如何調整時間塊來適應深度工作？</p>
+<span class="text-xs text-[#9ca3af] mt-1">6 min read</span>
+</div>
+</a>
+<a class="group flex flex-col gap-3 rounded-2xl p-4 hover:bg-white hover:shadow-lg hover:shadow-gray-200/50 transition-all duration-300 border border-transparent hover:border-[#f0f3f4]" href="#">
+<div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-[#f0f3f4] relative">
+<img 
+  src="/image/article-mini.jpg" 
+  alt="Line art of a calm minimal room" 
+  class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+  style="filter: grayscale(0.5) contrast(1.1);"/>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<span class="text-xs font-bold text-primary uppercase tracking-wide">環境與心理</span>
+<h4 class="text-lg font-bold text-[#111518] leading-tight group-hover:text-primary transition-colors">打造讓你心情平靜的辦公桌</h4>
+<p class="text-sm text-[#617b89] line-clamp-2">極簡主義不僅是美學，更能直接影響你的大腦清晰度。</p>
+<span class="text-xs text-[#9ca3af] mt-1">4 min read</span>
+</div>
+</a>
+</div>
+</section>
+</main>
+
+        <footer class="w-full text-center py-6 border-t border-tertiary bg-white/50">
+            <p class="text-secondary text-sm font-medium">
+                🔒 100% Confidential & Anonymous.<br>
+                &copy;114-1員工協助與職場健康課程提案。ALL Right Reserved。僅課堂練習使用，不得販售商用。
+            </p>
+        </footer>
+</div>
+</body>
+
+</html>

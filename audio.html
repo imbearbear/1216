@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Employee Experience Platform</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+tailwind.config = {
+    darkMode: 'class',
+    theme: {
+        extend: {
+            colors: {
+                /* 你原本的色彩 */
+                "primary": "#3E88B0",
+                "secondary": "#6DA5CA",
+                "tertiary": "#C0CFDB",
+                "cream": "#F4F2ED",
+                "beige": "#ECDCD7",
+                "surface": "#ffffff",
+
+                /* 讓你 UI 正常運作的新增色彩 */
+                "theme-purple": "#A48AFF",
+                "theme-purple-light": "#C9BBFF",
+                "surface-light": "#FAFAFA",
+                "surface-dark": "#3F3F46",
+                "text-muted-light": "#9CA3AF",
+                "text-main-light": "#1F2937",
+            },
+            fontFamily: {
+                "display": ["Poppins", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+            },
+        },
+    },
+}
+</script>
+
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark transition-colors duration-300">
+
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+    <header class="w-full border-b border-solid border-tertiary px-4 py-3 bg-white/80 backdrop-blur-md">
+            <div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+
+                <!-- 左邊 Logo -->
+                <div class="flex items-center gap-4 text-primary">
+                    <div class="size-8 text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px"
+                            fill="#F19175">
+                            <path
+                                d="M440-501Zm0 381L313-234q-72-65-123.5-116t-85-96q-33.5-45-49-87T40-621q0-94 63-156.5T260-840q52 0 99 22t81 62q34-40 81-62t99-22q81 0 136 45.5T831-680h-85q-18-40-53-60t-73-20q-51 0-88 27.5T463-660h-46q-31-45-70.5-72.5T260-760q-57 0-98.5 39.5T120-621q0 33 14 67t50 78.5q36 44.5 98 104T440-228q26-23 61-53t56-50l9 9 19.5 19.5L605-283l9 9q-22 20-56 49.5T498-172l-58 52Zm280-160v-120H600v-80h120v-120h80v120h120v80H800v120h-80Z" />
+                        </svg>
+                    </div>
+                <h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] text-primary">員工體驗平台</h2>
+                </div>
+
+                <!-- 右側區塊：導覽列 + avatar + logout + menu -->
+                <div class="flex items-center gap-6">
+
+                    <!-- Desktop 導覽列 -->
+                    <div class="hidden md:flex items-center gap-9">
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="/index.html">首頁</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="consultation.html">諮詢服務</a>
+                        <a class="text-primary text-sm font-bold"
+                            href="elearning.html">數位課程</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="activity.html">活動講座</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="guide.html">職場指南針</a>
+                    </div>
+
+                    <!-- Avatar -->
+                    <img src="image/avatar.jpg" alt="使用者頭像" class="aspect-square size-10 rounded-full object-cover border-2 border-primary"/>
+
+                    <!-- Logout -->
+                    <button
+                        class="hidden md:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-beige text-primary hover:bg-tertiary transition-colors text-sm font-bold">
+                        <span class="truncate">Logout</span>
+                    </button>
+
+                    <!-- Mobile Menu -->
+                    <button class="md:hidden text-primary">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+    </header>
+<main class="pt-20 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex flex-col">
+<div class="flex flex-col items-center text-center mt-8 mb-10 space-y-4">
+<h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-text-main-light dark:text-white">
+      音訊工具箱
+    </h1>
+<p class="text-lg text-text-muted-light dark:text-gray-400 max-w-2xl">
+      專為員工打造的聽覺休憩空間，隨時隨地找回內心的平靜與專注。
+    </p>
+</div>
+
+<div class="flex justify-center mb-10">
+  <div class="flex gap-2 sm:gap-4 overflow-x-auto pb-2 px-4 w-full justify-start sm:justify-center scrollbar-hide">
+
+    <!-- Chip 1：睡眠資源 -->
+    <button class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 whitespace-nowrap">
+      <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 -960 960 960" fill="currentColor">
+        <path d="M80-200v-240q0-27 11-49t29-39v-112q0-50 35-85t85-35h160q23 0 43 8.5t37 23.5q17-15 37-23.5t43-8.5h160q50 0 85 35t35 85v112q18 17 29 39t11 49v240h-80v-80H160v80H80Zm440-360h240v-80q0-17-11.5-28.5T720-680H560q-17 0-28.5 11.5T520-640v80Zm-320 0h240v-80q0-17-11.5-28.5T400-680H240q-17 0-28.5 11.5T200-640v80Zm-40 200h640v-80q0-17-11.5-28.5T760-480H200q-17 0-28.5 11.5T160-440v80Zm640 0H160h640Z"/>
+      </svg>
+      睡眠資源
+    </button>
+
+    <!-- Chip 2：正念冥想 -->
+    <button class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 whitespace-nowrap">
+      <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 -960 960 960" fill="currentColor">
+        <path d="M272-160q-30 0-51-21t-21-51q0-21 12-39.5t32-26.5l156-62v-90q-54 63-125.5 96.5T120-320v-80q68 0 123.5-28T344-508l54-64q12-14 28-21t34-7h40q18 0 34 7t28 21l54 64q45 52 100.5 80T840-400v80q-83 0-154.5-33.5T560-450v90l156 62q20 8 32 26.5t12 39.5q0 30-21 51t-51 21H400v-20q0-26 17-43t43-17h120q9 0 14.5-5.5T600-260q0-9-5.5-14.5T580-280H460q-42 0-71 29t-29 71v20h-88Zm208-480q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/>
+      </svg>
+      正念冥想
+    </button>
+
+    <!-- Chip 3：專注工作 -->
+    <button class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 whitespace-nowrap hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 -960 960 960" fill="currentColor">
+        <path d="M200-120q-33 0-56.5-23.5T120-200v-160h80v160h160v80H200Zm400 0v-80h160v-160h80v160q0 33-23.5 56.5T760-120H600ZM120-600v-160q0-33 23.5-56.5T200-840h160v80H200v160h-80Zm640 0v-160H600v-80h160q33 0 56.5 23.5T840-760v160h-80ZM480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280Zm0-80q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0-120Z"/>
+      </svg>
+      專注工作
+    </button>
+
+    <!-- Chip 4：深度放鬆 -->
+    <button class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 whitespace-nowrap hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 -960 960 960" fill="currentColor">
+        <path d="M920-559q-72 0-138-27.5T665-665q-51-51-78.5-117T559-920h80q0 57 21 108t61 91q40 40 91 61.5T920-638v79Zm0-159q-41 0-77.5-15T777-777q-29-29-44-65.5T718-920h79q0 25 9.5 47.5T833-833q17 17 39.5 26t47.5 9v80ZM400-440q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM80-120v-112q0-33 17-62t47-44q51-26 115-44t141-18q77 0 141 18t115 44q30 15 47 44t17 62v112H80Zm80-80h480v-32q0-11-5.5-20T620-266q-36-18-92.5-36T400-320q-71 0-127.5 18T180-266q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T480-600q0-33-23.5-56.5T400-680q-33 0-56.5 23.5T320-600q0 33 23.5 56.5T400-520Zm0-80Zm0 400Z"/>
+      </svg>
+      深度放鬆
+    </button>
+
+  </div>
+</div>
+
+
+
+<div class="relative w-full rounded-3xl overflow-hidden bg-theme-purple dark:bg-gray-800 text-white shadow-xl mb-12 flex flex-col lg:flex-row min-h-[500px]">
+<div class="lg:w-1/2 p-8 lg:p-12 relative flex items-center justify-center order-2 lg:order-1 bg-theme-purple-light dark:bg-gray-700/50">
+<div class="absolute w-full h-full opacity-10">
+<svg class="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<path d="M47.5,-61.2C60.9,-54.3,69.9,-38.4,74.5,-21.8C79.1,-5.2,79.3,12.1,72.4,26.8C65.6,41.5,51.8,53.6,36.9,61.9C22,70.2,6,74.7,-8.7,72.1C-23.4,69.5,-36.8,59.8,-48.6,48.6C-60.4,37.4,-70.6,24.7,-74.6,9.8C-78.6,-5.1,-76.4,-22.2,-67.2,-36.3C-58,-50.4,-41.8,-61.5,-26.3,-67.2C-10.8,-72.9,4,-73.2,19.2,-70.3C34.4,-67.4,50,-61.3,47.5,-61.2Z" fill="#FFFFFF" transform="translate(100 100)"></path>
+</svg>
+</div>
+<div class="relative w-full max-w-lg h-96">
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 z-20 group cursor-pointer">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl transition-transform duration-300 group-hover:scale-105 border-4 border-white/20">
+<img alt="Drift off" class="w-full h-40 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9VCPTIHIl-bsW4_IkMyelMGQzAZKTNLHnDNv3czKYQAnBaZ0QagMgzMfHYWfM-8Fn5ufXX4CW06GtbZkmZLFAmhGSuWt_Jk2KRH5_GLZZ1mLNF-k5trMJCJvBL_2lwKdSpbNQyr9Lhtfd7DcrM6NscChne0kO97Wr3aSUzPT3CRDUdT3WfAu-RK4re6UdGIk1du8F96yv5lIllGWSMnxxHpi-hmSrBYTZzKrMUu8XB2i4LvbkVJVSKB_n_eR157mnwgFj-P4Euag"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
+<h3 class="font-bold text-lg">快速入眠</h3>
+<div class="flex items-center text-xs opacity-80 mt-1">
+<span class="material-icons-round text-sm mr-1">timer</span> 15 min
+                         </div>
+</div>
+</div>
+</div>
+<div class="absolute top-10 left-0 w-48 z-10 transform -rotate-6 opacity-80 hover:opacity-100 transition-all hover:z-30 hover:scale-105 cursor-pointer">
+<div class="rounded-2xl overflow-hidden shadow-lg bg-surface-light text-gray-800">
+<img alt="Rain sounds" class="w-full h-32 object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx17DASrFlV8ep5w5lOW9mhVezkl8zLLHi2FfxS2IDv2H6JfEVZNtJQRaGQQtWOlPYcv8GRpIKXFIEGxmy_pJVm7_Ujc87EOS4Jk8kBhuo87DBJepECCQysuwVc1X0Y-j6i3DsmUxq6n9QfYQVB26rYFp4jBX4dJFO0gUpUUfsV_-KfMfewZHG5nykV0T3x4FggYixU7QvOIOFUoKK-fTK241C6fPFnMdCIvV8gwif1XF4ThiLCr4q864JRidNK3Yy1XZC1BXigww"/>
+<div class="p-3">
+<p class="font-medium text-sm">雨夜冥想</p>
+</div>
+</div>
+</div>
+<div class="absolute bottom-10 right-0 w-48 z-10 transform rotate-6 opacity-80 hover:opacity-100 transition-all hover:z-30 hover:scale-105 cursor-pointer">
+<div class="rounded-2xl overflow-hidden shadow-lg bg-surface-light text-gray-800">
+<img alt="Nature sounds" class="w-full h-32 object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEXTDQm5ieu2m_HMWLpl54LI1uZOzsE3BeFzNO-tamh8EHjYezBanbIBvnlI_WayCCGMuTbwS7Hglz-VUlldHetD9uMm5wlxzI55PlckHDzsyKxnqzwk_gQduOfnY8tn0JlMB00LfR6Ok4wHSSFP9SpG19WaRxu5Kf3pT12_4C6-LKKj0V45IkWShIBO_F7_bS6mQGKbMOGPjQr7lSsIs8LWIEnmuDawZUN5OtGYbMHQKGu-OacStUQdH1n6fW0VvUAxf2gSKGUxg"/>
+<div class="p-3">
+<p class="font-medium text-sm">湖畔寧靜</p>
+</div>
+</div>
+</div>
+<div class="absolute top-0 right-10 text-yellow-300 animate-pulse">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       height="38px" width="38px"
+       viewBox="0 -960 960 960"
+       fill="currentColor">
+    <path d="M852-212 732-332l56-56 120 120-56 56ZM708-692l-56-56 120-120 56 56-120 120Zm-456 0L132-812l56-56 120 120-56 56ZM108-212l-56-56 120-120 56 56-120 120Zm246-75 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-361Z"/>
+  </svg>
+</div>
+ 
+<div class="absolute bottom-20 left-10 text-white animate-pulse" style="animation-delay: 1s;">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       class="w-8 h-8"
+       viewBox="0 -960 960 960"
+       fill="currentColor">
+    <path d="M484-80q-84 0-157.5-32t-128-86.5Q144-253 112-326.5T80-484q0-146 93-257.5T410-880q-18 99 11 193.5T521-521q71 71 165.5 100T880-410q-26 144-138 237T484-80Zm0-80q88 0 163-44t118-121q-86-8-163-43.5T464-465q-61-61-97-138t-43-163q-77 43-120.5 118.5T160-484q0 135 94.5 229.5T484-160Z"/>
+  </svg>
+</div>
+
+</div>
+</div>
+<div class="lg:w-1/2 p-8 lg:p-16 flex flex-col justify-center order-1 lg:order-2">
+<h2 class="text-3xl lg:text-4xl font-bold mb-4 leading-tight">睡前準備必備</h2>
+<p class="text-white/80 text-lg mb-8 leading-relaxed">
+        今晚睡得更香甜。精選一系列睡前冥想導引、證實有效的放鬆練習，以及舒緩的自然音效。現在就試聽看看。
+      </p>
+<div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 mb-8">
+<div class="flex items-center gap-4 mb-3">
+<div class="bg-white rounded-full p-3 shadow-lg flex-shrink-0 opacity-80 icon-btn">
+  <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#6b4eff">
+    <path d="m380-300 280-180-280-180v360ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+  </svg>
+</div>
+
+<div class="flex-1">
+<h4 class="font-bold text-lg">今日推薦：SOS 焦慮釋放</h4>
+<p class="text-sm text-white/70">引導：正念導師</p>
+</div>
+<span class="text-sm font-medium">10:00</span>
+</div>
+<div class="w-full bg-black/20 rounded-full h-1.5 mt-2">
+<div class="bg-white/50 h-1.5 rounded-full w-1/3 relative"></div>
+</div>
+</div>
+<a href="#audio-section"
+   class="bg-white text-theme-purple hover:bg-gray-100 font-bold py-3 px-8 rounded-full self-start transition-colors shadow-lg inline-block">
+  瀏覽所有睡眠資源
+</a>
+
+</div>
+</div>
+
+
+
+<div class="mb-12">
+<div class="flex items-center justify-between mb-6 px-2">
+  <!-- 左邊標題 + SVG -->
+  <h3 id="audio-section"
+    class="text-2xl font-bold text-text-main-light dark:text-white flex items-center gap-2">
+
+    <!-- SVG icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" height="32px" width="32px"
+         viewBox="0 -960 960 960" fill="currentColor" class="text-primary">
+        <path d="M360-120H200q-33 0-56.5-23.5T120-200v-280q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-840q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480v280q0 33-23.5 56.5T760-120H600v-320h160v-40q0-117-81.5-198.5T480-760q-117 0-198.5 81.5T200-480v40h160v320Zm-80-240h-80v160h80v-160Zm400 0v160h80v-160h-80Zm-400 0h-80 80Zm400 0h80-80Z"/>
+    </svg>
+
+    精選音檔
+</h3>
+
+
+  <!-- 右邊連結 -->
+  <a class="text-sm font-medium text-primary hover:text-primary-hover transition-colors" href="#">查看全部</a>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<!-- 卡片 1 -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all theme-card-hover group cursor-pointer">
+  <div class="relative h-48 rounded overflow-hidden mb-4">
+    <img alt="Meditation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded" src="./image/audio-mediation.jpg"/>
+    
+    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded"></div>
+    <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-bold px-2 py-1 rounded-md shadow-sm">冥想導引</span>
+
+    <button class="absolute inset-0 m-auto w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-primary hover:text-white">
+      <span class="material-symbols-outlined text-2xl">play_arrow</span>
+    </button>
+  </div>
+  <h4 class="text-lg font-bold text-text-main-light dark:text-white mb-1 group-hover:text-primary transition-colors">正念冥想</h4>
+  <p class="text-md text-gray-600 dark:text-gray-400 line-clamp-2">聆聽引導，隨時隨地練習專注，釋放焦慮</p>
+</div>
+
+<!-- 卡片 2 -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all theme-card-hover group cursor-pointer">
+  <div class="relative h-48 rounded overflow-hidden mb-4">
+    <img alt="Focus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded" src="/image/audio-focus.jpg"/>
+    
+    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded"></div>
+    <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-bold px-2 py-1 rounded-md shadow-sm">專注音樂</span>
+
+    <button class="absolute inset-0 m-auto w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-primary hover:text-white">
+      <span class="material-symbols-outlined text-2xl">play_arrow</span>
+    </button>
+  </div>
+  <h4 class="text-lg font-bold text-text-main-light dark:text-white mb-1 group-hover:text-primary transition-colors">日常專注力</h4>
+  <p class="text-md text-gray-600 dark:text-gray-400 line-clamp-2">營造專注氛圍，柔和旋律引導您進入專注狀態，同時減輕壓力</p>
+</div>
+
+<!-- 卡片 3 -->
+ <div class="bg-surface-light dark:bg-surface-dark rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all theme-card-hover group cursor-pointer">
+  <div class="relative h-48 rounded overflow-hidden mb-4">
+    <img alt="Focus" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded" src="/image/audio-sleeping.jpg"/>
+    
+    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded"></div>
+    <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-bold px-2 py-1 rounded-md shadow-sm">睡前故事</span>
+
+    <button class="absolute inset-0 m-auto w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-primary hover:text-white">
+      <span class="material-symbols-outlined text-2xl">play_arrow</span>
+    </button>
+  </div>
+  <h4 class="text-lg font-bold text-text-main-light dark:text-white mb-1 group-hover:text-primary transition-colors">睡眠與恢復</h4>
+  <p class="text-md text-gray-600 dark:text-gray-400 line-clamp-2">放慢呼吸，跟隨聲音的指引，漫遊在靜謐的星空之下</p>
+</div>
+
+<!-- 卡片 4 -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all theme-card-hover group cursor-pointer">
+  <div class="relative h-48 rounded overflow-hidden mb-4">
+    <img alt="Nature" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded" src="/image/audio-calm2.jpg"/>
+    
+    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded"></div>
+    <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-bold px-2 py-1 rounded-md shadow-sm">自然白噪音</span>
+
+    <button class="absolute inset-0 m-auto w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-primary hover:text-white">
+      <span class="material-symbols-outlined text-2xl">play_arrow</span>
+    </button>
+  </div>
+  <h4 class="text-lg font-bold text-text-main-light dark:text-white mb-1 group-hover:text-primary transition-colors">森林鳥鳴</h4>
+  <p class="text-md text-gray-600 dark:text-gray-400 line-clamp-2">彷彿置身於晨間森林，享受純淨的自然氣息</p>
+</div>
+
+<!-- 卡片 5 -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all theme-card-hover group cursor-pointer">
+  <div class="relative h-48 rounded overflow-hidden mb-4">
+    <img alt="Rainy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded" src="./image/audio-relief.jpg"/>
+    
+    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded"></div>
+    <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-bold px-2 py-1 rounded-md shadow-sm">深度放鬆</span>
+
+    <button class="absolute inset-0 m-auto w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-primary hover:text-white">
+      <span class="material-symbols-outlined text-2xl">play_arrow</span>
+    </button>
+  </div>
+  <h4 class="text-lg font-bold text-text-main-light dark:text-white mb-1 group-hover:text-primary transition-colors">舒解壓力</h4>
+  <p class="text-md text-gray-600 dark:text-gray-400 line-clamp-2">柔和的雨聲幫助您平靜心緒，進入深層放鬆狀態</p>
+</div>
+
+
+<!-- 卡片 6 -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-all theme-card-hover group cursor-pointer">
+  <div class="relative h-48 rounded overflow-hidden mb-4">
+    <img alt="Drift off" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 rounded" src="/image/audio-wave.jpg"/>
+    
+    <!-- 圖片遮罩 -->
+    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded"></div>
+
+    <!-- 類別標籤 -->
+    <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-bold px-2 py-1 rounded-md shadow-sm">
+      呼吸練習
+    </span>
+
+    <!-- 播放按鈕 (hover 時才出現) -->
+    <button class="absolute inset-0 m-auto w-12 h-12 bg-white/90 rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-primary hover:text-white">
+      <span class="material-symbols-outlined text-2xl">play_arrow</span>
+    </button>
+  </div>
+
+  <h4 class="text-lg font-bold text-text-main-light dark:text-white mb-1 group-hover:text-primary transition-colors">即刻舒緩</h4>
+  <p class="text-md text-gray-600 dark:text-gray-400 line-clamp-2">輕柔的引導語，帶您在雲端漫步，釋放所有壓力</p>
+</div>
+
+
+</div>
+</div>
+</main>
+     <footer class="w-full text-center py-6 border-t border-tertiary bg-white/50">
+            <p class="text-secondary text-sm font-medium">
+                🔒 100% Confidential & Anonymous.<br>
+                &copy;114-1員工協助與職場健康課程提案。ALL Right Reserved。僅課堂練習使用，不得販售商用。
+            </p>
+        </footer>
+ </div>
+</body>
+
+
+</html>

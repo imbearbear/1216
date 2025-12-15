@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Employee Experience Platform</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3E88B0", // Deep Blue
+                        "secondary": "#6DA5CA", // Medium Blue
+                        "tertiary": "#C0CFDB", // Light Blue
+                        "cream": "#F4F2ED", // Cream White
+                        "beige": "#ECDCD7", // Light Yellow/Beige
+                        "surface": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-cream font-body text-slate-800 antialiased selection:bg-tertiary selection:text-primary">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+    <header class="w-full border-b border-solid border-tertiary px-4 py-3 bg-white/80 backdrop-blur-md">
+            <div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+
+                <!-- 左邊 Logo -->
+                <div class="flex items-center gap-4 text-primary">
+                    <div class="size-8 text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px"
+                            fill="#F19175">
+                            <path
+                                d="M440-501Zm0 381L313-234q-72-65-123.5-116t-85-96q-33.5-45-49-87T40-621q0-94 63-156.5T260-840q52 0 99 22t81 62q34-40 81-62t99-22q81 0 136 45.5T831-680h-85q-18-40-53-60t-73-20q-51 0-88 27.5T463-660h-46q-31-45-70.5-72.5T260-760q-57 0-98.5 39.5T120-621q0 33 14 67t50 78.5q36 44.5 98 104T440-228q26-23 61-53t56-50l9 9 19.5 19.5L605-283l9 9q-22 20-56 49.5T498-172l-58 52Zm280-160v-120H600v-80h120v-120h80v120h120v80H800v120h-80Z" />
+                        </svg>
+                    </div>
+                <h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] text-primary">員工體驗平台</h2>
+                </div>
+
+                <!-- 右側區塊：導覽列 + avatar + logout + menu -->
+                <div class="flex items-center gap-6">
+
+                    <!-- Desktop 導覽列 -->
+                    <div class="hidden md:flex items-center gap-9">
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="/index.html">首頁</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="consultation.html">諮詢服務</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="elearning.html">數位課程</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="activity.html">活動講座</a>
+                        <a class="text-primary text-sm font-bold"
+                            href="guide.html">職場指南針</a>
+                    </div>
+
+                    <!-- Avatar -->
+                    <img src="image/avatar.jpg" alt="使用者頭像" class="aspect-square size-10 rounded-full object-cover border-2 border-primary"/>
+
+                    <!-- Logout -->
+                    <button
+                        class="hidden md:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-beige text-primary hover:bg-tertiary transition-colors text-sm font-bold">
+                        <span class="truncate">Logout</span>
+                    </button>
+
+                    <!-- Mobile Menu -->
+                    <button class="md:hidden text-primary">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+
+            </div>
+</header>
+
+
+
+
+<main class="flex-grow w-full max-w-[1280px] mx-auto p-4 md:p-8 lg:p-12 flex flex-col gap-16">
+<section class="flex flex-col gap-2">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-4xl md:text-5xl font-black font-display text-primary tracking-tight mb-2">職場指南針</h1>
+<p class="text-slate-500 text-lg">Your compass for workplace updates &amp; culture.</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-slate-400 bg-white/50 px-3 py-1 rounded-full border border-tertiary/30">
+                    Oct 24, 2023
+                </span>
+</div>
+</div>
+</section>
+
+<div class="w-full flex justify-center">
+  <div class="relative w-full">
+    <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+      <span class="material-symbols-outlined text-surface-light/40">search</span>
+    </div>
+    <input 
+      class="block w-full pl-14 pr-6 h-14 rounded-full bg-white border border-surface-dark text-surface-dark placeholder:text-surface-light/40
+             focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm text-base"
+      placeholder="輸入關鍵字：壓力、正念、放鬆..."
+      type="text"/>
+  </div>
+</div>
+
+<section class="w-full">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-xl font-bold font-display text-slate-700 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">star</span>
+                Featured Story
+             </h2>
+</div>
+<div class="w-full bg-white rounded-3xl overflow-hidden shadow-xl shadow-primary/5 border border-tertiary/30 grid grid-cols-1 lg:grid-cols-5 hover:shadow-primary/10 transition-shadow duration-500 cursor-pointer group relative">
+<div class="lg:col-span-3 relative h-72 lg:h-auto overflow-hidden">
+<div class="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur text-primary px-3 py-1 rounded-full text-xs font-bold shadow-sm uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">verified</span> Featured
+                </div>
+<img 
+  src="/image/article-annual.jpg" 
+  alt="Annual article illustration" 
+  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent lg:hidden"></div>
+</div>
+<div class="lg:col-span-2 p-6 lg:p-10 flex flex-col justify-center gap-4 bg-white relative">
+<div class="absolute -top-10 -right-10 size-40 bg-beige/50 rounded-full blur-3xl opacity-60"></div>
+<div class="relative z-10 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-sm text-secondary font-bold uppercase tracking-wide">
+<span class="size-2 rounded-full bg-primary"></span>
+<span>Announcements</span>
+</div>
+<h2 class="text-2xl lg:text-3xl font-bold font-display text-slate-800 leading-tight group-hover:text-primary transition-colors">
+                        2025 心靈探索之旅：找回你的工作熱情與生活平衡
+                    </h2>
+<p class="text-slate-500 leading-relaxed line-clamp-3">
+在忙碌的工作中，你是否常感到疲憊、心力交瘁？這篇文章將解析職業倦怠的成因，並分享重新找回熱情與生活平衡的策略，讓你在工作與生活中都能更自在。                    </p>
+</div>
+<div class="flex items-center justify-between mt-6 relative z-10 pt-6 border-t border-slate-100">
+<span class="text-xs text-slate-400 font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 2 hours ago
+                    </span>
+<a href="./article.html" class="flex items-center gap-2 text-sm font-bold text-primary hover:text-secondary transition-colors group/btn">
+  Read Full Story
+  <span class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</a>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="w-full flex flex-col gap-8">
+  <!-- 標題 -->
+  <div class="text-center w-full">
+    <h2 class="text-4xl font-black font-display text-slate-800 mb-2">What's new?</h2>
+    <p class="text-xs font-bold tracking-[0.2em] text-slate-500 uppercase">Latest News &amp; Topics</p>
+  </div>
+
+  <!-- 滑動文章列表 -->
+  <div class="relative w-full overflow-hidden px-4 md:px-0">
+    <div class="flex overflow-x-auto gap-8 pb-4 snap-x scrollbar-hide px-4">
+
+      <!-- 文章 1 -->
+      <article class="min-w-[280px] md:min-w-[320px] snap-center flex gap-4 group cursor-pointer">
+        <div class="flex flex-col items-center gap-2 h-full">
+          <div class="h-full w-px bg-slate-300 group-hover:bg-primary transition-colors"></div>
+        </div>
+        <div class="[writing-mode:vertical-rl] rotate-180 text-xs font-bold tracking-widest text-slate-400 font-mono py-2">
+          2025.12.10
+        </div>
+        <div class="flex flex-col gap-3 flex-1">
+          <div class="w-full aspect-square bg-beige/30 overflow-hidden relative group-hover:opacity-90 transition-opacity border border-slate-200">
+            <img alt="冥想課程插畫" class="w-full h-full object-cover" src="/image/activity-mediation.jpg">
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-[10px] font-bold text-primary uppercase tracking-wider">正念冥想</span>
+            <h3 class="text-base font-bold font-display text-slate-800 group-hover:text-primary transition-colors leading-snug">
+              早晨五分鐘冥想，減緩焦慮情緒
+            </h3>
+            <p class="text-xs text-slate-500 line-clamp-2 leading-relaxed">
+              簡單冥想練習幫助你開始一天，提升專注力與情緒穩定度。
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 文章 2 -->
+      <article class="min-w-[280px] md:min-w-[320px] snap-center flex gap-4 group cursor-pointer">
+        <div class="flex flex-col items-center gap-2 h-full">
+          <div class="h-full w-px bg-slate-300 group-hover:bg-primary transition-colors"></div>
+        </div>
+        <div class="[writing-mode:vertical-rl] rotate-180 text-xs font-bold tracking-widest text-slate-400 font-mono py-2">
+          2025.12.08
+        </div>
+        <div class="flex flex-col gap-3 flex-1">
+          <div class="w-full aspect-square bg-tertiary/20 overflow-hidden relative group-hover:opacity-90 transition-opacity border border-slate-200">
+            <img alt="團體心理諮商插畫" class="w-full h-full object-cover" src="/image/article-group.jpg">
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-[10px] font-bold text-secondary uppercase tracking-wider">心理健康</span>
+            <h3 class="text-base font-bold font-display text-slate-800 group-hover:text-primary transition-colors leading-snug">
+              團體心理諮商的力量
+            </h3>
+            <p class="text-xs text-slate-500 line-clamp-2 leading-relaxed">
+              分享與交流能減輕孤單感，提升自我認知與情緒管理。
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 文章 3 -->
+      <article class="min-w-[280px] md:min-w-[320px] snap-center flex gap-4 group cursor-pointer">
+        <div class="flex flex-col items-center gap-2 h-full">
+          <div class="h-full w-px bg-slate-300 group-hover:bg-primary transition-colors"></div>
+        </div>
+        <div class="[writing-mode:vertical-rl] rotate-180 text-xs font-bold tracking-widest text-slate-400 font-mono py-2">
+          2025.12.05
+        </div>
+        <div class="flex flex-col gap-3 flex-1">
+          <div class="w-full aspect-square bg-primary/10 overflow-hidden relative group-hover:opacity-90 transition-opacity border border-slate-200">
+            <img alt="正向心理學插畫" class="w-full h-full object-cover" src="/image/article-writing.jpg">
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-[10px] font-bold text-primary uppercase tracking-wider">正向心理</span>
+            <h3 class="text-base font-bold font-display text-slate-800 group-hover:text-primary transition-colors leading-snug">
+              小習慣打造大幸福感
+            </h3>
+            <p class="text-xs text-slate-500 line-clamp-2 leading-relaxed">
+              每日三件小事，幫助你提升快樂感與自我滿足感。
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 文章 4 -->
+      <article class="min-w-[280px] md:min-w-[320px] snap-center flex gap-4 group cursor-pointer">
+        <div class="flex flex-col items-center gap-2 h-full">
+          <div class="h-full w-px bg-slate-300 group-hover:bg-primary transition-colors"></div>
+        </div>
+        <div class="[writing-mode:vertical-rl] rotate-180 text-xs font-bold tracking-widest text-slate-400 font-mono py-2">
+          2025.12.01
+        </div>
+        <div class="flex flex-col gap-3 flex-1">
+          <div class="w-full aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden relative group-hover:opacity-90 transition-opacity border border-slate-200">
+            <img alt="趣味心理測驗插畫" class="w-full h-full object-cover mix-blend-multiply opacity-80" src="/image/article-thumbnail2.jpg">
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-[10px] font-bold text-primary uppercase tracking-wider">趣味心理</span>
+            <h3 class="text-base font-bold font-display text-slate-800 group-hover:text-primary transition-colors leading-snug">
+              測驗你的壓力指數
+            </h3>
+            <p class="text-xs text-slate-500 line-clamp-2 leading-relaxed">
+              透過簡單心理測驗了解你的壓力狀態，並提供紓壓建議。
+            </p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- 分頁/控制按鈕 -->
+  <div class="flex items-center justify-center gap-8 mt-4">
+    <button class="size-10 border border-slate-400 rounded-sm flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all duration-300">
+      <span class="material-symbols-outlined text-base">arrow_back</span>
+    </button>
+    <div class="font-display font-bold text-lg tracking-widest text-slate-800 flex items-center gap-4">
+      01 <span class="h-px w-8 bg-slate-400"></span> 02
+    </div>
+    <button class="size-10 border border-slate-400 rounded-sm flex items-center justify-center text-slate-600 hover:bg-slate-800 hover:text-white hover:border-slate-800 transition-all duration-300">
+      <span class="material-symbols-outlined text-base">arrow_forward</span>
+    </button>
+  </div>
+</section>
+
+</main>
+
+        <footer class="w-full text-center py-6 border-t border-tertiary bg-white/50">
+            <p class="text-secondary text-sm font-medium">
+                🔒 100% Confidential & Anonymous.<br>
+                &copy;114-1員工協助與職場健康課程提案。ALL Right Reserved。僅課堂練習使用，不得販售商用。
+            </p>
+        </footer>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Employee Experience Platform</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+   <script id="tailwind-config">
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#3E88B0",
+                    "secondary": "#6DA5CA",
+                    "tertiary": "#C0CFDB",
+                    "cream": "#F4F2ED",
+                    "beige": "#ECDCD7",
+                    "surface": "#ffffff",
+                },
+                fontFamily: {
+                    "display": ["Poppins", "Noto Sans", "sans-serif"]
+                },
+                borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                animation: {
+                    carousel: 'carousel 16s cubic-bezier(0.4, 0, 0.2, 1) infinite',
+                },
+                keyframes: {
+                    carousel: {
+                        '0%, 25%': { transform: 'translateX(0)' },
+                        '30%, 55%': { transform: 'translateX(-25%)' },
+                        '60%, 85%': { transform: 'translateX(-50%)' },
+                        '90%, 100%': { transform: 'translateX(-75%)' },
+                    }
+                }
+            },
+        },
+    }
+</script>
+
+</head>
+<body class="bg-cream text-deep-blue font-display antialiased selection:bg-beige selection:text-deep-blue">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="w-full border-b border-solid border-tertiary px-4 py-3 bg-white/80 backdrop-blur-md">
+    <div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+    <!-- 左邊 Logo -->
+        <div class="flex items-center gap-4 text-primary">
+            <div class="size-8 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px"
+                     fill="#F19175">
+                <path d="M440-501Zm0 381L313-234q-72-65-123.5-116t-85-96q-33.5-45-49-87T40-621q0-94 63-156.5T260-840q52 0 99 22t81 62q34-40 81-62t99-22q81 0 136 45.5T831-680h-85q-18-40-53-60t-73-20q-51 0-88 27.5T463-660h-46q-31-45-70.5-72.5T260-760q-57 0-98.5 39.5T120-621q0 33 14 67t50 78.5q36 44.5 98 104T440-228q26-23 61-53t56-50l9 9 19.5 19.5L605-283l9 9q-22 20-56 49.5T498-172l-58 52Zm280-160v-120H600v-80h120v-120h80v120h120v80H800v120h-80Z" /></svg>
+            </div>
+                <h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] text-primary">員工體驗平台</h2>
+        </div>
+    <!-- 右側區塊：導覽列 + avatar + logout + menu -->
+        <div class="flex items-center gap-6">
+
+                    <!-- Desktop 導覽列 -->
+                    <div class="hidden md:flex items-center gap-9">
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="/index.html">首頁</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="consultation.html">諮詢服務</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="elearning.html">數位課程</a>
+                        <a class="text-primary text-sm font-bold" href="/index.html"
+                            href="activity.html">活動講座</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="guide.html">職場指南針</a>
+                    </div>
+
+                    <!-- Avatar -->
+                    <img src="image/avatar.jpg" alt="使用者頭像" class="aspect-square size-10 rounded-full object-cover border-2 border-primary"/>
+                    <!-- Logout -->
+                    <button
+                        class="hidden md:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-beige text-primary hover:bg-tertiary transition-colors text-sm font-bold">
+                        <span class="truncate">Logout</span>
+                    </button>
+
+                    <!-- Mobile Menu -->
+                    <button class="md:hidden text-primary">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+
+            </div>
+</header>
+
+<div class="relative w-full max-h-[800px] overflow-hidden">
+  <!-- 背景圖片 -->
+  <div class="w-full h-full aspect-[16/9] overflow-hidden relative">
+    <img src="./image/hiking.jpg" 
+         class="w-full h-full object-cover opacity-80" alt="hero image">
+    
+    <!-- 漸層遮罩 -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
+
+    <!-- 中央文字與按鈕 -->
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
+        放鬆身心，啟動療癒時光
+      </h1>
+      <p class="text-lg md:text-xl text-white mb-8 drop-shadow-md">
+        精選活動，讓你的每一天更充滿能量與連結
+      </p>
+      <!-- 調整按鈕文案與導向 -->
+      <a href="#activities" class="bg-white text-black font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition">
+        瀏覽活動列表
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- 活動區，id對應Hero按鈕導向 -->
+<main id="activities" class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+  <div class="flex flex-col gap-12">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-bold font-display tracking-tight text-primary">身心療癒活動</h1>
+        <p class="mt-2 text-base font-display text-secondary">精心策劃的活動體驗，不僅讓你放鬆身心，也能增進同事間的默契與情感連結。</p>
+      </div>
+      <a class="group inline-flex items-center gap-1.5 text-sm font-medium font-display text-primary hover:text-surface transition-colors whitespace-nowrap" href="#">
+        <span>查看全部活動</span>
+        <span class="material-symbols-outlined text-base transition-transform group-hover:translate-x-1">arrow_forward</span>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- 活動 1 -->
+      <div class="group flex flex-col overflow-hidden border border-primary/20 p-4 rounded-md">
+        <div class="relative overflow-hidden rounded-md aspect-[4/3]">
+          <img src="image/activity-climbing2.jpg" alt="室內攀岩活動" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"/>
+        </div>
+        <div class="pt-5 flex-grow flex flex-col">
+          <div class="flex-grow">
+            <span class="text-xs font-bold uppercase tracking-wider text-primary font-display">挑戰極限</span>
+            <h3 class="mt-1 text-xl font-bold font-display text-primary">室內攀岩工作坊</h3>
+            <p class="mt-2 text-sm font-display text-secondary leading-relaxed line-clamp-2">透過攀岩挑戰自我極限，建立自信與突破舒適圈的勇氣。</p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-tertiary flex items-center justify-between text-sm text-secondary">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-lg">calendar_month</span>
+              <span class="font-medium font-display">10月20日</span>
+            </div>
+            <a class="px-4 py-2 text-sm font-bold font-display text-primary bg-primary/20 rounded-full hover:bg-primary hover:text-surface transition-colors duration-300" href="#">立即報名</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 活動 2 -->
+      <div class="group flex flex-col overflow-hidden border border-primary/20 p-4 rounded-md">
+        <div class="relative overflow-hidden rounded-md aspect-[4/3]">
+          <img src="image/activity-plants2.jpg" alt="植栽手作工作坊" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"/>
+        </div>
+        <div class="pt-5 flex-grow flex flex-col">
+          <div class="flex-grow">
+            <span class="text-xs font-bold uppercase tracking-wider text-primary font-display">團隊活力</span>
+            <h3 class="mt-1 text-xl font-bold font-display text-primary">植栽手作工作坊</h3>
+            <p class="mt-2 text-sm font-display text-secondary leading-relaxed line-clamp-2">動手製作可愛的多肉盆栽，享受療癒的創作過程並增進團隊互動。</p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-tertiary flex items-center justify-between text-sm text-secondary">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-lg">calendar_month</span>
+              <span class="font-medium font-display">11月05日</span>
+            </div>
+            <span class="px-4 py-2 text-sm font-medium font-display text-secondary bg-tertiary rounded-full cursor-not-allowed">已額滿</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 活動 3 -->
+      <div class="group flex flex-col overflow-hidden border border-primary/20 p-4 rounded-md">
+        <div class="relative overflow-hidden rounded-md aspect-[4/3]">
+          <img src="image/activity-tea.jpg" alt="茶道體驗活動" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"/>
+        </div>
+        <div class="pt-5 flex-grow flex flex-col">
+          <div class="flex-grow">
+            <span class="text-xs font-bold uppercase tracking-wider text-primary font-display">靜心茶藝</span>
+            <h3 class="mt-1 text-xl font-bold font-display text-primary">茶道體驗</h3>
+            <p class="mt-2 text-sm font-display text-secondary leading-relaxed line-clamp-2">透過傳統茶道的儀式感，暫停片刻，感受寧靜與專注的時光。</p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-tertiary flex items-center justify-between text-sm text-secondary">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-lg">calendar_month</span>
+              <span class="font-medium font-display">11月12日</span>
+            </div>
+            <span class="px-4 py-2 text-sm font-medium font-display text-primary border border-dashed border-primary rounded-full">即將開放</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+
+        <footer class="w-full text-center py-6 border-t border-tertiary bg-white/50">
+            <p class="text-secondary text-sm font-medium">
+                🔒 100% Confidential & Anonymous.<br>
+                &copy;114-1員工協助與職場健康課程提案。ALL Right Reserved。僅課堂練習使用，不得販售商用。
+            </p>
+        </footer>
+</div>
+</body>
+
+</html>

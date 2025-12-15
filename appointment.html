@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Employee Experience Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3E88B0", // Deep Blue
+                        "secondary": "#6DA5CA", // Medium Blue
+                        "tertiary": "#C0CFDB", // Light Blue
+                        "cream": "#F4F2ED", // Cream White
+                        "beige": "#ECDCD7", // Light Yellow/Beige
+                        "surface": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-cream font-display text-slate-800">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+    <header class="w-full border-b border-solid border-tertiary px-4 py-3 bg-white/80 backdrop-blur-md">
+            <div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+
+                <!-- 左邊 Logo -->
+                <div class="flex items-center gap-4 text-primary">
+                    <div class="size-8 text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px"
+                            fill="#F19175">
+                            <path
+                                d="M440-501Zm0 381L313-234q-72-65-123.5-116t-85-96q-33.5-45-49-87T40-621q0-94 63-156.5T260-840q52 0 99 22t81 62q34-40 81-62t99-22q81 0 136 45.5T831-680h-85q-18-40-53-60t-73-20q-51 0-88 27.5T463-660h-46q-31-45-70.5-72.5T260-760q-57 0-98.5 39.5T120-621q0 33 14 67t50 78.5q36 44.5 98 104T440-228q26-23 61-53t56-50l9 9 19.5 19.5L605-283l9 9q-22 20-56 49.5T498-172l-58 52Zm280-160v-120H600v-80h120v-120h80v120h120v80H800v120h-80Z" />
+                        </svg>
+                    </div>
+                <h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] text-primary">員工體驗平台</h2>
+                </div>
+
+                <!-- 右側區塊：導覽列 + avatar + logout + menu -->
+                <div class="flex items-center gap-6">
+
+                    <!-- Desktop 導覽列 -->
+                    <div class="hidden md:flex items-center gap-9">
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="/index.html">首頁</a>
+                        <a class="text-primary text-sm font-bold"
+                            href="consultation.html">諮詢服務</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="elearning.html">數位課程</a>
+                        <a class="ttext-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="activity.html">活動講座</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="guide.html">職場指南針</a>
+                    </div>
+
+                    <!-- Avatar -->
+                    <img src="image/avatar.jpg" alt="使用者頭像" class="aspect-square size-10 rounded-full object-cover border-2 border-primary"/>
+
+
+                    <!-- Logout -->
+                    <button
+                        class="hidden md:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-beige text-primary hover:bg-tertiary transition-colors text-sm font-bold">
+                        <span class="truncate">Logout</span>
+                    </button>
+
+                    <!-- Mobile Menu -->
+                    <button class="md:hidden text-primary">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+
+            </div>
+</header>
+
+</main>
+<main class="flex-grow flex flex-col items-center justify-center p-4 md:p-10">
+<div class="w-full max-w-[1100px] grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8">
+<div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 group">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent z-10 mix-blend-multiply opacity-80"></div>
+<img src="/image/appointment.jpg"  alt="Calm office setting with plants suggesting privacy"  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+<div class="absolute top-4 left-4 z-20 bg-primary/95 backdrop-blur-sm text-white px-4 py-2 rounded-full flex items-center gap-2 shadow-lg ring-1 ring-white/20">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="text-xs font-bold uppercase tracking-wide">100% Confidential</span>
+</div>
+<div class="absolute bottom-6 left-6 z-20 pr-6">
+<h3 class="text-white text-xl font-bold mb-1">Your privacy is our priority</h3>
+<p class="text-blue-100 text-sm">All sessions are anonymous and off-the-record.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h1 class="text-primary text-4xl md:text-5xl font-black leading-tight tracking-tight">
+                            談心室<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">預約您的專屬時段。</span>
+</h1>
+<p class="text-slate-600 text-lg font-medium leading-relaxed">
+                            匿名一對一諮詢 (Anonymous One-on-One Consultation). Talk to a certified professional without worrying about your data.
+                        </p>
+<div class="flex items-center gap-2 text-sm text-secondary mt-2">
+<span class="material-symbols-outlined">verified_user</span>
+<span class="font-semibold">End-to-end encrypted booking system</span>
+</div>
+</div>
+</div>
+<div class="w-full bg-white border border-tertiary/50 p-6 md:p-10 rounded-3xl shadow-xl shadow-primary/5 relative overflow-hidden">
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-8">
+<div class="flex items-center justify-between pb-4 border-b border-gray-100">
+<h3 class="text-xl font-bold text-primary">選擇想預約的時段</h3>
+<span class="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">Step 1 of 2</span>
+</div>
+<div class="flex flex-col gap-6">
+<label class="flex flex-col gap-3 group">
+<span class="text-slate-700 text-base font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">calendar_month</span>
+                                    選擇日期 
+                                </span>
+<div class="relative">
+<input class="w-full bg-cream text-slate-800 border-0 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary placeholder-tertiary transition-all cursor-pointer font-medium" placeholder="Select a date" type="date"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-secondary">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</label>
+<label class="flex flex-col gap-3 group">
+<span class="text-slate-700 text-base font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">schedule</span>
+                                    選擇時間
+                                </span>
+<div class="relative">
+<select class="w-full bg-cream text-slate-800 border-0 rounded-2xl px-5 py-4 appearance-none focus:ring-2 focus:ring-primary cursor-pointer font-medium">
+<option disabled="" selected="" value="">--:-- AM/PM</option>
+<option value="09:00">09:00 AM - 10:00 AM</option>
+<option value="10:00">10:00 AM - 11:00 AM</option>
+<option value="13:00">01:00 PM - 02:00 PM</option>
+<option value="14:00">02:00 PM - 03:00 PM</option>
+<option value="16:00">04:00 PM - 05:00 PM</option>
+</select>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-secondary">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</label>
+<label class="flex flex-col gap-3 group">
+<span class="text-slate-700 text-base font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+                                    您關心的話題
+                                    <span class="text-secondary/70 text-xs font-normal ml-auto border border-secondary/30 rounded-full px-2 py-0.5">Optional</span>
+</span>
+<div class="relative">
+<textarea class="w-full bg-cream text-slate-800 border-0 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-primary placeholder-tertiary transition-all font-medium min-h-[100px] resize-none" placeholder="Briefly describe what you'd like to discuss..."></textarea>
+</div>
+</label>
+<div class="flex gap-4 mt-2 px-1">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-xs text-slate-500 font-medium">Available</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+<span class="text-xs text-slate-400 font-medium">Booked</span>
+</div>
+</div>
+</div>
+<div class="pt-4">
+<a href="./confirm.html"
+   class="group relative w-full flex items-center justify-center overflow-hidden rounded-full h-14 bg-primary text-white text-lg font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40">
+    <span class="relative z-10 flex items-center gap-2">
+        下一步
+        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">
+            arrow_forward
+        </span>
+    </span>
+</a>
+
+<p class="text-center mt-4 text-xs text-secondary/80 flex items-center justify-center gap-1 font-medium">
+<span class="material-symbols-outlined text-sm">lock_person</span>
+                                Your selection is temporarily held for 10 minutes
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<footer class="w-full text-center py-6 border-t border-tertiary bg-white/50">
+    <p class="text-secondary text-sm font-medium">
+    🔒 100% Confidential & Anonymous.<br>
+    &copy;114-1員工協助與職場健康課程提案。ALL Right Reserved。僅課堂練習使用，不得販售商用。
+    </p>
+</footer> 
+
+
+</body>
+
+</html>

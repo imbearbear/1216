@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Employee Experience Platform</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3E88B0", // Deep Blue
+                        "secondary": "#6DA5CA", // Medium Blue
+                        "tertiary": "#C0CFDB", // Light Blue
+                        "cream": "#F4F2ED", // Cream White
+                        "beige": "#ECDCD7", // Light Yellow/Beige
+                        "surface": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light min-h-screen flex flex-col font-display text-surface-dark overflow-x-hidden">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+    <header class="w-full border-b border-solid border-tertiary px-4 py-3 bg-white/80 backdrop-blur-md">
+            <div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+
+                <!-- 左邊 Logo -->
+                <div class="flex items-center gap-4 text-primary">
+                    <div class="size-8 text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px"
+                            fill="#F19175">
+                            <path
+                                d="M440-501Zm0 381L313-234q-72-65-123.5-116t-85-96q-33.5-45-49-87T40-621q0-94 63-156.5T260-840q52 0 99 22t81 62q34-40 81-62t99-22q81 0 136 45.5T831-680h-85q-18-40-53-60t-73-20q-51 0-88 27.5T463-660h-46q-31-45-70.5-72.5T260-760q-57 0-98.5 39.5T120-621q0 33 14 67t50 78.5q36 44.5 98 104T440-228q26-23 61-53t56-50l9 9 19.5 19.5L605-283l9 9q-22 20-56 49.5T498-172l-58 52Zm280-160v-120H600v-80h120v-120h80v120h120v80H800v120h-80Z" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] text-primary">員工體驗平台</h2>
+                </div>
+
+                <!-- 右側區塊：導覽列 + avatar + logout + menu -->
+                <div class="flex items-center gap-6">
+
+                    <!-- Desktop 導覽列 -->
+                    <div class="hidden md:flex items-center gap-9">
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors" href="/index.html">首頁</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="consultation.html">諮詢服務</a>
+                        <a class="text-primary text-sm font-bold"
+                            href="elearning.html">數位課程</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="activity.html">活動講座</a>
+                        <a class="text-slate-600 text-sm font-medium hover:text-primary transition-colors"
+                            href="guide.html">職場指南針</a>
+                    </div>
+
+                    <!-- Avatar -->
+                    <img src="image/avatar.jpg" alt="使用者頭像" class="aspect-square size-10 rounded-full object-cover border-2 border-primary"/>
+
+                    <!-- Logout -->
+                    <button
+                        class="hidden md:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-beige text-primary hover:bg-tertiary transition-colors text-sm font-bold">
+                        <span class="truncate">Logout</span>
+                    </button>
+
+                    <!-- Mobile Menu -->
+                    <button class="md:hidden text-primary">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+
+            </div>
+    </header>
+
+
+
+
+
+<main class="flex-1 w-full max-w-[1200px] mx-auto px-4 md:px-10 py-10 md:py-16">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
+<div class="flex flex-col gap-6 max-w-2xl pt-4">
+<h1 class="text-surface-dark text-4xl md:text-5xl font-bold leading-tight tracking-tight">
+                數位資源 
+                <span class="block text-2xl md:text-3xl font-normal text-surface-light/70 mt-3 font-display">Digital Resources</span>
+</h1>
+<p class="text-surface-light text-lg font-medium leading-relaxed max-w-lg opacity-80">
+                    探索我們精心整理的音訊與課程，陪伴你在繁忙工作中找到喘息的空間，重拾平衡與專注。
+                </p>
+</div>
+<div class="hidden md:flex relative size-56 items-center justify-center">
+<div class="absolute inset-0 bg-[#e6e8e6] rounded-full opacity-60"></div>
+<img class="w-48 h-48 object-contain mix-blend-multiply opacity-90" data-alt="Minimalist line art illustration of a person listening to music" src="/image/elaerning.jpg"/>
+</div>
+</div>
+<div class="flex flex-col gap-8 mb-12">
+<div class="w-full">
+<div class="w-full">
+  <div class="relative w-full">
+    <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+      <span class="material-symbols-outlined text-surface-light/40">search</span>
+    </div>
+<input class="block w-full pl-14 pr-6 h-14 rounded-full bg-white border border-surface-dark text-surface-dark placeholder:text-surface-light/40
+         focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-sm text-base"
+  placeholder="搜尋您需要的資源... Search for resources..."
+  type="text"/>
+  </div>
+</div>
+
+</div>
+<div class="flex gap-4 flex-wrap">
+<!-- 全部 -->
+<button class="flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-8 transition-transform active:scale-95 shadow-sm">
+  <span class="text-white text-sm font-bold tracking-wide">全部 (All)</span>
+</button>
+
+<!-- 音頻 -->
+<button class="flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white border border-gray-200 px-6 shadow-sm">
+  <span class="text-primary text-sm font-medium">音頻 (Audio)</span>
+</button>
+
+<!-- 課程 -->
+<button class="flex h-11 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white border border-gray-200 px-6 shadow-sm">
+  <span class="text-primary text-sm font-medium">課程 (Courses)</span>
+</button>
+
+
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+<div class="group flex flex-col rounded-2xl bg-white border border-gray-200 overflow-hidden hover:shadow-lg hover:border-surface-dark/30 transition-all duration-300">
+<div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+<img 
+  src="/image/audio2.jpg" 
+  alt="Audio thumbnail" 
+  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"/>
+<div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-100 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-surface-dark">headphones</span>
+<span class="text-xs font-bold text-surface-dark tracking-wide uppercase">Audio</span>
+</div>
+</div>
+
+<div class="flex flex-col flex-1 p-6 gap-5">
+<div class="flex-1 space-y-3">
+<h3 class="text-surface-dark text-xl font-bold leading-tight group-hover:text-surface-light transition-colors">音樂工具箱 <br/><span class="text-base font-normal opacity-80">Audio Toolkit</span></h3>
+<p class="text-surface-light/80 text-sm font-normal leading-relaxed line-clamp-2">
+                            開始工作前的 10 分鐘引導，幫助您建立專注力與平靜心態。
+                        </p>
+</div>
+<a href="audio.html" class="flex w-full items-center justify-center gap-2 rounded-xl h-12 border border-surface-dark/20 text-surface-dark 
+  hover:bg-primary hover:text-white hover:border-transparent text-sm font-bold transition-all">
+  <span class="material-symbols-outlined text-lg">play_arrow</span>
+  <span>立即聆聽</span>
+</a>
+
+</div>
+</div>
+<div class="group flex flex-col rounded-2xl bg-white border border-gray-200 overflow-hidden hover:shadow-lg hover:border-surface-dark/30 transition-all duration-300">
+<div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+<img 
+  src="/image/Efficient Communication.jpg" 
+  alt="Efficient Communication" 
+  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"/>
+<div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-100 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-surface-dark">school</span>
+<span class="text-xs font-bold text-surface-dark tracking-wide uppercase">Course</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-6 gap-5">
+<div class="flex-1 space-y-3">
+<h3 class="text-surface-dark text-xl font-bold leading-tight group-hover:text-surface-light transition-colors">高效率溝通技巧 <br/><span class="text-base font-normal opacity-80">Efficient Communication</span></h3>
+<p class="text-surface-light/80 text-sm font-normal leading-relaxed line-clamp-2">
+                            提升團隊協作的核心方法，掌握非暴力溝通與積極傾聽的藝術。
+                        </p>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-xl h-12 border border-surface-dark/20 text-surface-dark 
+  hover:bg-primary hover:text-white hover:border-transparent text-sm font-bold transition-all">
+  <span class="material-symbols-outlined text-lg">videocam</span>
+  <span>觀看課程</span>
+</button>
+
+</div>
+</div>
+
+<div class="group flex flex-col rounded-2xl bg-white border border-gray-200 overflow-hidden hover:shadow-lg hover:border-surface-dark/30 transition-all duration-300">
+<div class="relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+<img 
+  src="/image/leadership.jpg" 
+  alt="Leadership" 
+  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"/>
+<div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-1.5 border border-gray-100 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-surface-dark">school</span>
+<span class="text-xs font-bold text-surface-dark tracking-wide uppercase">Course</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 p-6 gap-5">
+<div class="flex-1 space-y-3">
+<h3 class="text-surface-dark text-xl font-bold leading-tight group-hover:text-surface-light transition-colors">新晉主管領導力 <br/><span class="text-base font-normal opacity-80">Leadership 101</span></h3>
+<p class="text-surface-light/80 text-sm font-normal leading-relaxed line-clamp-2">
+                            從個人貢獻者轉變為團隊領導者的心態調適與技能培養。
+                        </p>
+</div>
+<button class="flex w-full items-center justify-center gap-2 rounded-xl h-12 border border-surface-dark/20 text-surface-dark 
+  hover:bg-primary hover:text-white hover:border-transparent text-sm font-bold transition-all">
+<span class="material-symbols-outlined text-lg">videocam</span>
+<span>觀看課程</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex justify-center pb-8">
+<button class="flex items-center justify-center gap-2 px-10 py-3.5 rounded-full bg-white border border-gray-200 hover:border-surface-dark/30 hover:bg-gray-50 text-surface-dark font-bold transition-all group shadow-sm">
+<span>載入更多 (Load More)</span>
+<span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">expand_more</span>
+</button>
+</div>
+</main>
+
+        <footer class="w-full text-center py-6 border-t border-tertiary bg-white/50">
+            <p class="text-secondary text-sm font-medium">
+                🔒 100% Confidential & Anonymous.<br>
+                &copy;114-1員工協助與職場健康課程提案。ALL Right Reserved。僅課堂練習使用，不得販售商用。
+            </p>
+        </footer>
+</div>
+</body>
+
+</html>
